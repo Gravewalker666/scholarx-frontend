@@ -62,7 +62,6 @@ function ManageMentors() {
       .then((result: AxiosResponse<Mentor[]>) => {
         if (result.status == 200 || result.status == 204) {
           setMentors(result.data);
-          setIsLoading(false);
         } else {
           throw new Error();
         }
@@ -79,10 +78,9 @@ function ManageMentors() {
   return (
     <div className={styles.container}>
       <Spin tip="Loading..." spinning={isLoading}>
+        <Title>Manage Mentors</Title>
         <Row>
-          <Col md={3} />
-          <Col md={15}>
-            <Title>Manage Mentors</Title>
+          <Col span={12} offset={6}>
             {!shouldLoadMentors && program != null && (
               <Empty
                 image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
@@ -94,6 +92,10 @@ function ManageMentors() {
                 }
               />
             )}
+          </Col>
+        </Row>
+        <Row>
+          <Col>
             {shouldLoadMentors && (
               <List
                 itemLayout="horizontal"

@@ -176,7 +176,7 @@ function MenteeApplication() {
                 type="primary"
                 onClick={showForm}
               >
-                {isApplied ? 'Edit my application' : 'Apply '}
+                {isApplied ? 'EditQuestions my application' : 'Apply '}
               </Button>
             )}
             <Col span={12}>

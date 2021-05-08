@@ -146,7 +146,7 @@ function MentorPrograms() {
               key={program.id}
               program={program}
               href={`/program/${program.id}/mentor/edit`}
-              buttonText={'Edit Application'}
+              buttonText={'EditQuestions Application'}
               isRejected={false}
             />
           ))}
